@@ -22,7 +22,11 @@ import {NotServedPage} from "../pages/not-served/not-served";
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,{
+    mode:'md',
+    tabsPlacement: 'bottom',
+    pageTransition: 'ios-transition',
+    }),
   ],
   bootstrap: [IonicApp],
   entryComponents: [

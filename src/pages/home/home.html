@@ -1,14 +1,36 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+    Add user and Guest
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div class="mon_form">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Nom</ion-label>
+        <ion-input type="text" [(ngModel)]="name" name="PersoName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Boisson</ion-label>
+        <ion-input type="text" [(ngModel)]="boisson" name="PersoBoisson"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Contact</ion-label>
+        <ion-input type="text" [(ngModel)]="contact" name="PersoContact"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Guest</ion-label>
+        <ion-input type="text" [(ngModel)]="guestName" name="GuestName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Boisson</ion-label>
+        <ion-input type="text" [(ngModel)]="guestBoisson" name="GuestBoisson"></ion-input>
+      </ion-item>
+      <button ion-button full (click)="saveData()" >Save user</button>
+    </ion-list>
+  </div>
 </ion-content>
